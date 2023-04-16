@@ -63,7 +63,7 @@
             color: #4e2323;
         }
 
-        #filter-controls {
+        #filter {
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -94,6 +94,19 @@
 
         #filter-button:hover {
             background-color: #c45ece;
+        }
+
+
+        .alert {
+            width: 100%;
+            background-color: blanchedalmond;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 900;
+            display: none;
+
         }
     </style>
 </head>
@@ -169,12 +182,12 @@
 
     <div style="margin-top: 50px; font-family: 'Times New Roman', Times, serif;">
         <h1 style="font-size: 50px; padding-left: 300px;">"Your search, your rules: </h1>
-        <h1 style=" padding-left: 450px; color: #c90a9c;" >Filter to find the perfect influencers"</h1>
+        <h1 style=" padding-left: 450px; color: #c90a9c;">Filter to find the perfect influencers"</h1>
     </div>
     <section>
 
-        <div id="filter-controls">
-            
+        <!-- <form class="view" id="filter">
+                <div>
                 <label style="padding-left: 250px;">Type of Influencer:</label>
                 <select id="Influencer-filter" name="Influencer-filter">
                     <option value="">All</option>
@@ -183,19 +196,77 @@
                     <option value="Macro">Macro</option>
                     <option value="Mega">Mega</option>
                 </select>
-            
-            
+            </div>
+            <div>
                 <label>Location:</label>
                 <input type="text" id="interested-location" name="interested-location">
-            
-            
+            </div>
+            <div>
                 <label>Price-Range:</label>
                 <input type="text" id="max-price-filter" name="price">
-            
-            
+            </div>
+            <div>
                 <button id="filter-button" type="submit">Filter</button>
-            
-        </div>
+            </div>
+        </form> -->
+
+        <section>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding-top: 10px;">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="view" id="filter">
+                            <div class="alert">Your message sent</div>
+                            <!-- <div class = "alert">Your message sent</div> -->
+                            <div class="form-row align-items-center">
+                                <div class="col-auto">
+                                    <br>
+                                </div>
+                                <div class="col-auto" style="margin-left: -30px;">
+                                    <label style="padding-left: 250px;">Type of Influencer:</label>
+                                    <select id="Influencer_filter" name="Influencer-filter">
+                                        <option value="">All</option>
+                                        <option value="Nano">Nano</option>
+                                        <option value="Micro">Micro</option>
+                                        <option value="Macro">Macro</option>
+                                        <option value="Mega">Mega</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-auto">
+                                    <label>Location:</label>
+                                    <input type="text" id="interested_location" name="interested-location">
+
+
+                                </div>
+                                <div class="col-auto">
+                                    <label>Price-Range:</label>
+                                    <input type="text" id="price" name="price">
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-primary mb-2">Filter</button>
+                            </div>
+
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
 
 
 
@@ -342,123 +413,123 @@
     <footer class="ftr text-center text-lg-start text-muted">
         <!-- Section: Social media -->
         <section class="ftrr d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-          <!-- Left -->
-          <div class="me-5 d-none d-lg-block dark">
-            <span style="color: black; font-size: large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Get
-              connected with us on social networks:</b></span>
-          </div>
-          <!-- Left -->
-    
-          <!-- Right -->
-          <div>
-            <a href="" class="me-4 link-secondary" style="padding-right: 15px;">
-              <img src="about_footer/facebook.png" height="28px">
-            </a>
-            <a href="" class="me-4 link-secondary" style="padding-right: 15px; padding-left: 15px;">
-              <img src="about_footer/Twitter.png" height="25px">
-              <a href="" class="me-4 link-secondary" style="padding-right: 15px; padding-left: 15px;">
-                <img src="about_footer/google.png" height="25px">
-              </a>
-              <a href="" class="me-4 link-secondary" style="padding-right: 15px; padding-left: 15px;">
-                <img src="about_footer/Instagram.png" height="25px">
-              </a>
-              <a href="" class="me-4 link-secondary" style="padding-right: 15px; padding-left: 15px;">
-                <img src="about_footer/linkedIn (2).png" height="30px">
-              </a>
-    
-          </div>
-          <!-- Right -->
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block dark">
+                <span
+                    style="color: black; font-size: large; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Get
+                    connected with us on social networks:</b></span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 link-secondary" style="padding-right: 15px;">
+                    <img src="about_footer/facebook.png" height="28px">
+                </a>
+                <a href="" class="me-4 link-secondary" style="padding-right: 15px; padding-left: 15px;">
+                    <img src="about_footer/Twitter.png" height="25px">
+                    <a href="" class="me-4 link-secondary" style="padding-right: 15px; padding-left: 15px;">
+                        <img src="about_footer/google.png" height="25px">
+                    </a>
+                    <a href="" class="me-4 link-secondary" style="padding-right: 15px; padding-left: 15px;">
+                        <img src="about_footer/Instagram.png" height="25px">
+                    </a>
+                    <a href="" class="me-4 link-secondary" style="padding-right: 15px; padding-left: 15px;">
+                        <img src="about_footer/linkedIn (2).png" height="30px">
+                    </a>
+
+            </div>
+            <!-- Right -->
         </section>
         <!-- Section: Social media -->
-    
+
         <!-- Section: Links  -->
         <section class="ftr">
-          <div class="container text-center text-md-start mt-5" style="color: white;">
-            <!-- Grid row -->
-            <div class="row mt-3">
-              <!-- Grid column -->
-              <div class="footer_toplft download-icons">
-                
-                <br>
-                <a href="" target="_blank"><img
-                    src="" alt=""></a>
-                <a href="" target="_blank"><img
-                    src="" alt=""></a>
-              </div>
-              <!-- Grid column -->
-    
-              <!-- Grid column -->
-              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4">
-                  Company
-                </h6>
-                <p>
-                  <a href="#!" class="text-reset">Careers</a>
-                </p>
-                <p>
-                  <a href="Chat_Box/index.html" class="text-reset">Contact Us</a>
-                </p>
-                <p>
-                  <a href="#!" class="text-reset">Help</a>
-                </p>
-    
-              </div>
-              <!-- Grid column -->
-    
-              <!-- Grid column -->
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4">
-                  Resources
-                </h6>
-                <p>
-                  <a href="#!" class="text-reset">Blog and Feed</a>
-                </p>
-                <p>
-                  <a href="#!" class="text-reset">Request Demo</a>
-                </p>
-    
-              </div>
-              <!-- Grid column -->
-    
-              <!-- Grid column -->
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4">Privacy</h6>
-                <p>
-                  <a href="#!" class="text-reset">Privacy Policy</a>
-                </p>
-                <p>
-                  <a href="#!" class="text-reset">Terms and Conditions</a>
-                </p>
-    
-              </div>
-              <!-- Grid column -->
+            <div class="container text-center text-md-start mt-5" style="color: white;">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="footer_toplft download-icons">
+
+                        <br>
+                        <a href="" target="_blank"><img src="" alt=""></a>
+                        <a href="" target="_blank"><img src="" alt=""></a>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Company
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Careers</a>
+                        </p>
+                        <p>
+                            <a href="Chat_Box/index.html" class="text-reset">Contact Us</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Resources
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Blog and Feed</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Request Demo</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Privacy</h6>
+                        <p>
+                            <a href="#!" class="text-reset">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Terms and Conditions</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
             </div>
-            <!-- Grid row -->
-          </div>
         </section>
         <!-- Section: Links  -->
-    
-    
+
+
         <!-- Copyright -->
         <div class="ftr text-center p-4" style="color: white;">
-    
-    
-    
-          <div class="footer_btmsec d-flex flex-row justify-content-between align-items-center" style="padding-left: 79px;">
-            <a href="" target="_blank"><img class="footer-brand-logo" src="Ns.jfif"
-                style="height: 50px; width: 50px;" alt=""></a>
-            <h4 style="padding-right: 1180px;">NetSpire</h4>
-          </div>
-    
-    
-          <b>© 2023 Copyright:</b>
-          <a class="text-reset fw-bold" href=""><b>NetSpire.com</b></a>
+
+
+
+            <div class="footer_btmsec d-flex flex-row justify-content-between align-items-center"
+                style="padding-left: 79px;">
+                <a href="" target="_blank"><img class="footer-brand-logo" src="Ns.jfif"
+                        style="height: 50px; width: 50px;" alt=""></a>
+                <h4 style="padding-right: 1180px;">NetSpire</h4>
+            </div>
+
+
+            <b>© 2023 Copyright:</b>
+            <a class="text-reset fw-bold" href=""><b>NetSpire.com</b></a>
         </div>
         <!-- Copyright -->
-      </footer>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -472,7 +543,7 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-    <script src="./filter.js"></script>
+    <script src="filter.js"></script>
 
 
 </body>

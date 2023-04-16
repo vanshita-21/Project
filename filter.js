@@ -18,13 +18,13 @@ const firebaseConfig = {
   
   var filterDB = firebase.database().ref("filter");
 
-  document.getElementById("filter").addEventListener("submit" , submitForm);
+  document.getElementById("filter").addEventListener("filter" , submitForm);
 
   function submitForm(e) {
     e.preventDefault();
 
-    var Influencer_filter = getElementVal("Influencer-filter");
-    var interested_location = getElementVal("interested-location");
+    var Influencer_filter = getElementVal("Influencer_filter");
+    var interested_location = getElementVal("interested_location");
     var price = getElementVal("price");
 
     saveMessages(Influencer_filter, interested_location, price);

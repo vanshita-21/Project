@@ -45,7 +45,7 @@
                                                 <img src="Ns.jfif" class="img-fluid" alt="" style="height:60px; border: 50px;">
                                             </a>
                                         </div>
-                                        <form action="http://127.0.0.1:5501/index.html" class="p-2" id="loginForm">
+                                        <form action="http://127.0.0.1:5501/after_login.html" class="p-2" id="loginForm">
                                             <div class="form-group">
                                                 <label for="emailaddress">Email address</label>
                                                 <input class="form-control" type="email" id="email" required="" placeholder="john@deo.com">
@@ -95,8 +95,8 @@
         function auth(){
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
-            if(email=="#email" && password=="#password"){
-                window.location.assign("index.html");
+            if(email=="vanshitaajn@gmail.com" && password=="vanshita"){
+                window.location.assign("after_login.html");
                 alert("Login Scuccessfully");
             }
             else{
